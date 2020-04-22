@@ -35,7 +35,7 @@ $(document).ready(function () {
         $.getJSON(webApiDomain + '/clientes', function (data) {
             data.forEach(item => {
                 count++;
-                let linha = '<tr id="' + item._id + '" title="' + item.nome + '"><td id="cod">' + count + '</td><td id="nome">' + item.nome + '</td><td>' + item.idade + '</td><td>' + item.uf + '</td><td><button type="button" id="btnRemove" class="btn btn-md btn-danger" data-id="' + item._id + '" data-toggle="modal" data-target="#modalConfirm"><span class="glyphicon glyphicon-remove"></span</button></td></tr>'
+                let linha = '<tr id="' + item._id + '" title="' + item.nome + '"><td id="cod">' + count + '</td><td id="nome">' + item.nome + '</td><td>' + item.idade + '</td><td>' + item.uf + '</td><td><button type="button" id="btnRemove" class="btn btn-md btn-danger" data-id="' + item._id + '" data-toggle="modal" data-target="#modalConfirm"><span class="glyphicon glyphicon-remove"></span></button></td></tr>'
                 tbody.append(linha)
             })
         })
